@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доска комментариев</title>
+</head>
+
+<body class="page">
+
+  <main>
+
+    <section class="form">
+
+      <h2 class="form__title">Оставить комментарий</h2>
+
+      <form name="comment" class="form__container">
+
+        <label class="form__field"> Ваше имя
+          <input type="text" name="name" class="form__user-name form__input" id="user-name" placeholder="Ваше имя" minLength="2" maxLength="30" required>
+          <span class="form__input-error hidden form__input-error_input" id="user-name-error"></span>
+        </label>
+
+        <label class="form__field"> Дата комментария
+          <input type="date" name="date" class="form__date form__input" id="comment-date">
+          <span class="form__input-error hidden" id="comment-date-error"></span>
+        </label>
+
+        <label class="form__field"> Ваш комментарий
+          <textarea type="text" name="text" class="form__commetn-text form__input" id="comment-text"
+            placeholder="Ваш комментарий" minLength="10" required></textarea>
+          <span class="form__input-error hidden form__input-error_textarea" id="comment-text-error"></span>
+        </label>
+
+        <button class="form__button-submit" type="submit" value="Отправить">Отправить</button>
+
+      </form>
+
+    </section>
+
+    <section class="comments">
+
+      <h1 class="comments__title">Комментарии</h1>
+
+    </section>
+
+  </main>
+
+  <template id="comment">
+
+    <div class="comment">
+
+      <div class="comment__info-container">
+
+        <div class="comment__info">
+          <p class="comment__user"></p>
+          <p class="comment__date"></p>
+        </div>
+
+        <div class="comment__buttons">
+          <button class="comment__button-like" type="button" aria-label="Нравится"></button>
+          <button class="comment__button-del" type="button" aria-label="Удалить"></button>
+        </div>
+
+      </div>
+
+      <p class="comment__text"></p>
+
+    </div>
+
+  </template>
+
+</body>
+
+</html>

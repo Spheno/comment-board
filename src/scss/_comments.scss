@@ -1,0 +1,62 @@
+@import "./constants";
+
+.comments {
+  @extend %flex;
+  row-gap: 30px;
+  margin: 20px 0;
+}
+
+.comments__title {
+  @extend %font-h1;
+}
+
+.comment {
+  border: 3px solid $borderColor;
+  padding: 20px;
+  border-radius: 20px;
+  width: 500px;
+  background-color: $bacgroundComment;
+}
+
+.comment__info-container {
+  border-bottom: .5px solid $borderColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.comment__user {
+  font-weight: 700;
+}
+
+.comment__date {
+  font-size: 11px;
+}
+
+.comment__buttons {
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment__button-like {
+  @extend %comment-button;
+  background-image: url(../images/5495020.png);
+  background-size: 20px;
+}
+
+.comment__button-like_active {
+  background-image: url(../images/free-icon-heart-1264367.png);
+}
+
+.comment__button-del {
+  @extend %comment-button;
+  background-image: url(../images/3082282.png);
+  background-size: 25px;
+}
+
+.comment__text {
+  padding-top: 20px;
+}

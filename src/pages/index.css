@@ -1,0 +1,376 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../vendor/fonts/Lora-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../vendor/fonts/Lora-Bold.ttf") format("truetype");
+}
+.page {
+  font-family: "Lora";
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.comments__title {
+  font-family: "Lora";
+  font-weight: 700;
+  line-height: 2;
+  font-size: 24px;
+}
+
+.form__title {
+  font-family: "Lora";
+  font-weight: 700;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.page, .comments, .form__container, .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comment__button-del, .comment__button-like {
+  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+}
+
+.page {
+  font-family: "Lora";
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.comments__title {
+  font-family: "Lora";
+  font-weight: 700;
+  line-height: 2;
+  font-size: 24px;
+}
+
+.form__title {
+  font-family: "Lora";
+  font-weight: 700;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.page, .comments, .form__container, .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comment__button-del, .comment__button-like {
+  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+}
+
+.form {
+  padding-top: 30px;
+}
+
+.form__container {
+  row-gap: 40px;
+  margin: 20px 0;
+  padding: 30px 0;
+  border: 2px solid #1E90FF;
+  border-radius: 20px;
+  width: 500px;
+  background-color: #F0FFFF;
+}
+
+.form__input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #1E90FF;
+  border-radius: 10px;
+}
+
+.form__input_invalid {
+  color: red;
+}
+
+.form__commetn-text {
+  width: 400px;
+  height: 200px;
+}
+
+.form__button-submit {
+  border: 1px solid #1E90FF;
+  background-color: #1E90FF;
+  color: #FFFAFA;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+}
+.form__button-submit:hover {
+  background-color: #6495ED;
+}
+.form__button-submit:disabled {
+  background-color: #F0FFFF;
+  color: #000;
+  cursor: default;
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.form__input-error {
+  position: absolute;
+  color: red;
+  font-size: 10px;
+  left: 5px;
+}
+
+.form__input-error_input {
+  top: 55px;
+}
+
+.form__input-error_textarea {
+  top: 220px;
+}
+
+.page {
+  font-family: "Lora";
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.comments__title {
+  font-family: "Lora";
+  font-weight: 700;
+  line-height: 2;
+  font-size: 24px;
+}
+
+.form__title {
+  font-family: "Lora";
+  font-weight: 700;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.page, .comments, .form, .form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comment__button-del, .comment__button-like {
+  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+}
+
+.comments {
+  row-gap: 30px;
+  margin: 20px 0;
+}
+
+.comment {
+  border: 3px solid #1E90FF;
+  padding: 20px;
+  border-radius: 20px;
+  width: 500px;
+  background-color: #F0FFFF;
+}
+
+.comment__info-container {
+  border-bottom: 0.5px solid #1E90FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10px;
+}
+
+.comment__user {
+  font-weight: 700;
+}
+
+.comment__date {
+  font-size: 11px;
+}
+
+.comment__buttons {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment__button-like {
+  background-image: url(../images/5495020.png);
+  background-size: 20px;
+}
+
+.comment__button-like_active {
+  background-image: url(../images/free-icon-heart-1264367.png);
+}
+
+.comment__button-del {
+  background-image: url(../images/3082282.png);
+  background-size: 25px;
+}
+
+.comment__text {
+  padding-top: 20px;
+}
+
+.page {
+  max-width: 1240px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #FFFAFA;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
